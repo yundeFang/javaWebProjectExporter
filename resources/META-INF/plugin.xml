@@ -1,0 +1,26 @@
+<idea-plugin>
+	<id>hlf.compileAndExporter</id>
+	<name>CompileAndExporter</name>
+	<version>1.0</version>
+	<depends>com.intellij.javaee</depends>
+	<vendor email="yunde.fang@gmail.com">Harland.Fang</vendor>
+	<description>Compile and Export Java code and resource files in JavaWeb projects.</description>
+
+	<change-notes>V1.0 You can compile and export Java Code, and directly export resource files in JavaWeb projects
+	</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+	  <action id="compileAndExporter.MAINACTION" class="com.hld.exporter.ExportMainAction" text="compileAndExport">
+		  <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+	  </action>
+  </actions>
+
+</idea-plugin>
